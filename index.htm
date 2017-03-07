@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title>JS Fun Console v 0.1 Alpha</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		body{
+			margin:0px;
+			padding:0px;
+			font-family:Arial,Helvetica,sans-serif;
+		}
+		
+		div#main{
+			width:100%;
+			max-width:700px;
+			margin:0px auto;
+		}
+		
+		div#con{
+			background-color:black;
+			outline:5px solid grey;
+			margin-top:7px;
+			margin-bottom:8px;
+		}
+
+		div#history{
+			width:98%;
+			height:300px;
+			color:white;
+			padding:1%;
+			border-bottom:4px solid grey;
+			overflow:auto;
+		}
+		
+		#code{
+			font-family:Tahoma;
+			background-color:black;
+			border:none;
+			width:100%;
+			height:200px;
+			color:yellow;
+			font-size:16px;
+			outline:none;
+			resize: none;
+			padding-left:10px;
+		}
+		
+		pre{
+			padding:5px;
+			background-color:black;
+			color:yellow;
+		}
+		
+		pre span{
+			color:grey;
+		}
+		
+		div#f{
+			width:96%;
+			height:20px;
+			margin-top:20px;
+			margin-bottom:20px;
+			color:white;
+			background-color:black;
+			padding:2%;
+			outline:5px solid grey;
+		}
+		
+		div#f a{
+			color:yellow;
+		}
+	</style>
+	<script type="text/javascript" src="console.js"></script>
+</head>
+<body>
+<div id="main">
+<div id="f">JS Fun Console v. 0.1 Alpha</div>
+	<div id="con">
+		<div id="history"></div>
+		<textarea id="code" onkeypress="onCtrlEnter(event, execute)">//Put your code here</textarea><br/>
+	</div>
+	<button onclick="execute();">Execute (Ctrl+Enter)</button> | <button onclick="clear();">Clear console</button>
+	<h1>Instructions</h1>
+	<pre>
+<span>//JS based console, just for fun</span>
+<span>//Show message:</span>
+print('Text');
+
+<span>//or: </span>
+print("Text");
+
+<span>//Variables:</span>
+var x;
+var d = 1;
+
+<span>//few:</span>
+var y, a = 5, st = 'Hello', name = 'Jon', Pi=3.14;
+
+<span>//operations:</span>
+x = d + a;
+x = d / a;
+x = d * a;
+x = d - a;
+x++; //x=x+1
+
+<span>//show variable:</span>
+print(d); 
+
+<span>//or:</span>
+print('d = ' + d); <span>//Show: d = 1</span>
+
+<span>//Conditions</span>
+if(d == 1) print('True') else print('False') <span>//Show: True</span>
+
+<span>//or (the same):</span>
+if(d == 1){
+ print('True')
+}
+else{
+ print('False')
+}
+
+<span>//Condition (not equal)</span>
+if(1 != 2) print('1 is not 2');
+else print('1 is not 2');
+
+<span>//Cycle with counter:</span>
+for(i = 0; i <= 10; i++){
+ print(i);
+}
+
+<span>//Cycle with condition</span>
+var i = 0;
+while(i <= 10){
+ print(i);
+ i++;
+}
+
+<span>//Cycle with postcondition:</span>
+var i = 0;
+do{
+ print(i);
+ i++;
+}while(i < 11)
+
+<span>/****work with page*****/</span>
+<span>//Set page background color red</span>
+document.bgColor = 'Red';
+
+<span>/*And also a hundreds other functions of JavaScript*/</span>
+</pre>
+<div id="f">&copy; Oct 2015, nmago</div>
+</div>
+</body>
+</html>
